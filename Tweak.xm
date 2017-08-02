@@ -88,12 +88,12 @@ animated:YES completion:nil];
 }
 %new
 -(void)dismissSwitcher {
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 SBDisplayItem *returnDisplayItem = MSHookIvar<SBDisplayItem *>(self, "_returnToDisplayItem");
-        SBDeckSwitcherItemContainer *returnContainer = [self
-_itemContainerForDisplayItem:returnDisplayItem];
-        SBDeckSwitcherPageView *returnPage = MSHookIvar<SBDeckSwitcherPageView
-*>(returnContainer, "_pageView");
-        [returnContainer _handlePageViewTap:returnPage];
+SBDeckSwitcherItemContainer *returnContainer = [self _itemContainerForDisplayItem:returnDisplayItem];
+SBDeckSwitcherPageView *returnPage = MSHookIvar<SBDeckSwitcherPageView *>(returnContainer, "_pageView");
+[returnContainer _handlePageViewTap:returnPage];
+});
 
 }
 
