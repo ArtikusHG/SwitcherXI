@@ -1,5 +1,4 @@
-Package: com.dgh0st.invisblehomecard
-Name: SwitcherXI
+Package: com.artikus.switcherxi
 Depends: mobilesubstrate
 Version: 1.0.0
 Architecture: iphoneos-arm
