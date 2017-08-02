@@ -1,0 +1,9 @@
+Package: com.dgh0st.invisblehomecard
+Name: SwitcherXI
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: The iOS 11 app switcher for iOS 10 iPhones.
+Maintainer: ArtikusHG
+Author: ArtikusHG
+Section: Tweaks
